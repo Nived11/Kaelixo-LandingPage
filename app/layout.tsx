@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
-// Original design-le weights (regular, bold, extra-bold) add cheyyunnu
 const inter = Inter({ 
   subsets: ["latin"],
   weight: ["400", "700", "800"] 
 });
 
 export const metadata: Metadata = {
-  title: "Kaelixo — Animated Hero",
-  description: "Premium animated Kaelixo technology hero section.",
+  title: "Kaelixo - Think. Build. Grow.",
+  description: "Kaelixo is a leading technology company that specializes in designing intelligent websites, building powerful software, creating custom CRM solutions, and delivering digital growth strategies for ambitious businesses worldwide.",
 };
 
 export default function RootLayout({
@@ -20,9 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* antialiased class remove cheythu, appol font kooduthal bold aayi kanum */}
       <body className={`${inter.className} min-h-screen`}>
         {children}
+        <Toaster position="top-center" richColors theme="dark" />
       </body>
     </html>
   );

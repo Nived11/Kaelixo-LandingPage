@@ -109,3 +109,110 @@ button {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==========================================
+   Phone Input Dark Theme & Search Box Styles
+   ========================================== */
+.phone-input-container .PhoneInputInput {
+  background: transparent !important;
+  border: none !important;
+  color: white !important;
+  outline: none !important;
+}
+
+.phone-input-container .PhoneInputCountrySelect {
+  background: #0a122b !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 6px !important;
+  padding: 3px !important;
+}
+
+.phone-input-container .PhoneInputCountrySelect option {
+  background: #070d1f !important;
+  color: white !important;
+}
+
+.phone-input-container .PhoneInputCountryIcon {
+  box-shadow: none !important;
+  width: 20px !important;
+  height: 15px !important;
+}
+
+/* Dropdown popover container styling with search box */
+.PhoneInputCountrySelectPanel {
+  background-color: #070d1f !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border-radius: 12px !important;
+  padding: 8px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8) !important;
+  max-height: 220px !important;
+}
+
+/* Search input inside country dropdown */
+.PhoneInputCountrySelectPanel input[type="search"],
+.PhoneInputCountrySelectPanel input {
+  background: rgba(12, 23, 52, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: white !important;
+  border-radius: 8px !important;
+  padding: 6px 10px !important;
+  margin-bottom: 8px !important;
+  outline: none !important;
+  font-size: 12px !important;
+  width: 100% !important;
+}
+
+.PhoneInputCountrySelectPanel input::placeholder {
+  color: #8d96ac !important;
+}
+
+.PhoneInputCountrySelectPanel .PhoneInputCountrySelectOption {
+  color: white !important;
+  font-size: 12px !important;
+  padding: 6px 8px !important;
+  border-radius: 6px !important;
+}
+
+.PhoneInputCountrySelectPanel .PhoneInputCountrySelectOption:hover {
+  background-color: rgba(255, 0, 82, 0.25) !important;
+}
+
+.PhoneInputCountrySelectPanel .PhoneInputCountrySelectOption--focused {
+  background-color: rgba(255, 0, 82, 0.25) !important;
+}
+
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+@keyframes toastCircle {
+  from {
+    stroke-dashoffset: 132;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes toastTick {
+  from {
+    stroke-dashoffset: 35;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
