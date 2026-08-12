@@ -5,18 +5,31 @@ import Link from "next/link";
 import Image from "next/image";
 import { useBookingModal } from "@/hooks/useBookingModal";
 import BookingFormModal from "@/components/BookingFormModal";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isOpen, openModal, closeModal, formData, handleInputChange, handleFormSubmit, isSubmitting } = useBookingModal();
+  const { isOpen, openModal, closeModal, formData, handleInputChange, handleFormSubmit, isSubmitting, phoneError } = useBookingModal();
 
   return (
     <>
       <header className="relative z-50 flex items-center justify-between gap-7 h-[70px] md:h-[76px] w-[min(1440px,92vw)] mx-auto">
         
-        {/* Brand & Full Logo */}
         <Link href="#home" className="flex items-center min-w-[180px]" aria-label="Kaelixo home">
-          <div className="relative flex items-center">
+          <motion.div 
+            className="relative flex items-center"
+            initial={{ 
+              opacity: 0, 
+              x: -25, 
+              clipPath: "inset(0 100% 0 0)" 
+            }} 
+            animate={{ 
+              opacity: 1, 
+              x: 0, 
+              clipPath: "inset(0 0% 0 0)" 
+            }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+          >
             <Image
               src="/kaelixo-fulllogo.png" 
               alt="Kaelixo Logo"
@@ -25,7 +38,7 @@ export default function Header() {
               className="object-contain h-[30px] md:h-[36px] w-auto drop-shadow-[0_10px_24px_rgba(255,0,82,0.25)]"
               priority
             />
-          </div>
+          </motion.div>
         </Link>
         
         {/* Desktop CTA Link */}
@@ -78,6 +91,7 @@ export default function Header() {
         handleInputChange={handleInputChange}
         handleFormSubmit={handleFormSubmit}
         isSubmitting={isSubmitting}
+        phoneError={phoneError}  
       />
     </>
   );

@@ -11,6 +11,7 @@ interface BookingFormModalProps {
   handleInputChange: (field: string, value: string) => void;
   handleFormSubmit: (e: React.FormEvent) => void;
   isSubmitting: boolean;
+  phoneError?: string;
 }
 
 export default function BookingFormModal({ 
@@ -19,7 +20,8 @@ export default function BookingFormModal({
   formData, 
   handleInputChange, 
   handleFormSubmit, 
-  isSubmitting 
+  isSubmitting,
+  phoneError 
 }: BookingFormModalProps) {
 
   useEffect(() => {
@@ -74,6 +76,7 @@ export default function BookingFormModal({
               <label className="block text-[11px] sm:text-xs font-semibold text-[#8d96ac] mb-1">Company Name</label>
               <input 
                 type="text" 
+                required
                 placeholder="Enter company name"
                 value={formData.companyName}
                 onChange={(e) => handleInputChange("companyName", e.target.value)}
@@ -90,9 +93,15 @@ export default function BookingFormModal({
                   placeholder="Enter phone number"
                   value={formData.contactNumber}
                   onChange={(value) => handleInputChange("contactNumber", value || "")}
-                  className="w-full px-3.5 py-2 rounded-[10px] bg-[rgba(12,23,52,0.78)] border border-white/10 text-white text-xs sm:text-sm focus-within:border-[var(--pink)] transition-colors"
+                  className={`w-full px-3.5 py-2 rounded-[10px] bg-[rgba(12,23,52,0.78)] border ${phoneError ? 'border-red-500' : 'border-white/10'} text-white text-xs sm:text-sm focus-within:border-[var(--pink)] transition-colors`}
                 />
               </div>
+              {/* എറർ മെസ്സേജ് കാണിക്കാൻ */}
+              {phoneError && (
+                <span className="block text-red-500 text-[10px] sm:text-[11px] mt-1 font-medium">
+                  {phoneError}
+                </span>
+              )}
             </div>
           </div>
 
