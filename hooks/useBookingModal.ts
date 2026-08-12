@@ -1,4 +1,3 @@
-// hooks/useBookingModal.ts
 import { useState } from "react";
 import { showToast } from "@/utils/toast";
 import { parsePhoneNumber } from "libphonenumber-js";
@@ -6,7 +5,7 @@ import { parsePhoneNumber } from "libphonenumber-js";
 export function useBookingModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [phoneError, setPhoneError] = useState(""); // പുതിയ സ്റ്റേറ്റ്
+  const [phoneError, setPhoneError] = useState(""); 
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -20,7 +19,7 @@ export function useBookingModal() {
   
   const closeModal = () => {
     setIsOpen(false);
-    setPhoneError(""); // ക്ലോസ് ചെയ്യുമ്പോൾ എറർ മാറ്റാൻ
+    setPhoneError(""); 
   };
   
   const toggleModal = () => setIsOpen(!isOpen);
@@ -28,15 +27,14 @@ export function useBookingModal() {
   const handleInputChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
     if (field === "contactNumber") {
-      setPhoneError(""); // ടൈപ്പ് ചെയ്യുമ്പോൾ എറർ ക്ലിയർ ആവാൻ
+      setPhoneError(""); 
     }
   };
 
   const handleFormSubmit = async (e: React.FormEvent, onSuccess?: () => void) => {
     e.preventDefault();
-    setPhoneError(""); // സബ്മിറ്റ് ചെയ്യുമ്പോൾ പഴയ എറർ മാറ്റുന്നു
+    setPhoneError(""); 
 
-    // ഫോൺ നമ്പർ വാലിഡേഷൻ ചെക്ക് ചെയ്യുക (ടോസ്റ്റിന് പകരം സ്റ്റേറ്റ്)
     if (!formData.contactNumber) {
       setPhoneError("Please enter a valid contact number!");
       return;

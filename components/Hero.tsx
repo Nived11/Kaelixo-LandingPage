@@ -180,7 +180,6 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right Visual Side Container - വലതുഭാഗം സാവധാനം വരാൻ */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
