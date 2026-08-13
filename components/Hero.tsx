@@ -1,11 +1,8 @@
-// components/Hero.tsx
-// components/Hero.tsx
 "use client";
 import Link from "next/link";
 import DashboardVisual from "./DashboardVisual";
 import { useBookingModal } from "@/hooks/useBookingModal";
 import BookingFormModal from "@/components/BookingFormModal";
-// താഴെ Variants കൂടെ ആഡ് ചെയ്യുക
 import { motion, Variants } from "framer-motion"; 
 
 export default function Hero() {
@@ -133,7 +130,7 @@ export default function Hero() {
             {/* Stats Metrics Grid */}
             <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-[10px] md:gap-2 mt-[50px] md:border-t md:border-[var(--line)] md:pt-[14px] max-w-none md:max-w-[600px]">
               <div className="flex gap-[10px] items-center border-0 md:pr-[10px] md:border-r md:border-[var(--line)]">
-                <span className="text-[20px] text-[var(--pink)]">♙</span>
+                <span className="text-[20px] text-[var(--pink)]">★</span>
                 <div>
                   <strong className="block text-[18px] leading-none mb-[2px]">
                     120+
@@ -144,7 +141,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="flex gap-[10px] items-center border-0 md:pr-[10px] md:border-r md:border-[var(--line)]">
-                <span className="text-[20px] text-[var(--pink)]">🚀</span>
+                <span className="text-[20px] text-[var(--pink)]">✔</span>
                 <div>
                   <strong className="block text-[18px] leading-none mb-[2px]">
                     250+
@@ -155,7 +152,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="flex gap-[10px] items-center border-0 md:pr-[10px] md:border-r md:border-[var(--line)]">
-                <span className="text-[20px] text-[var(--pink)]">◎</span>
+                <span className="text-[20px] text-[var(--pink)]">⚑</span>
                 <div>
                   <strong className="block text-[18px] leading-none mb-[2px]">
                     10+
@@ -166,7 +163,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="flex gap-[10px] items-center border-0">
-                <span className="text-[20px] text-[var(--pink)]">↗</span>
+                <span className="text-[20px] text-[var(--pink)]">♥</span>
                 <div>
                   <strong className="block text-[18px] leading-none mb-[2px]">
                     98%

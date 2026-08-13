@@ -119,7 +119,7 @@ export default function BookingFormModal({
             </select>
           </div>
 
-          {/* Subject / Project Details */}
+          {/* Subjects */}
           <div>
             <label className="block text-[11px] sm:text-xs font-semibold text-[#8d96ac] mb-1">Subject </label>
             <textarea 

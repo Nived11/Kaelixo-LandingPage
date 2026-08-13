@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
-import PageLoader from "@/components/PageLoader"; // ഇവിടെ ഇമ്പോർട്ട് ചെയ്തു
+import PageLoader from "@/components/PageLoader";
 import "./globals.css";
 
 const inter = Inter({ 

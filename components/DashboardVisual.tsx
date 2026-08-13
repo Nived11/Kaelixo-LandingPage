@@ -104,6 +104,7 @@ export default function DashboardVisual() {
                 width={70} 
                 height={25} 
                 className="object-contain"
+               
               />
             </div>
             <div className="px-[8px] py-[9px] text-white bg-gradient-to-r from-[rgba(122,66,255,0.72)] to-[rgba(255,0,82,0.18)] rounded-[8px] text-[11px] my-[4px]">▣ Dashboard</div>

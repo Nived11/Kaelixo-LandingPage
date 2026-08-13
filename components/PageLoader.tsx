@@ -37,6 +37,7 @@ export default function PageLoader({ children }: { children: React.ReactNode }) 
                 width={100}
                 height={100}
                 className="w-[70px] md:w-[100px] h-auto object-contain drop-shadow-[0_0px_25px_rgba(255,0,82,0.4)]"
+                
                 priority
               />
             </motion.div>
