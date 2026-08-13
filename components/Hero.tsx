@@ -20,7 +20,6 @@ export default function Hero() {
     phoneError,
   } = useBookingModal();
 
-  // ഇവിടെ : Variants എന്ന് ടൈപ്പ് കൊടുക്കുക
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {

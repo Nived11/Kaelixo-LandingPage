@@ -1,4 +1,3 @@
-// components/BookingFormModal.tsx
 "use client";
 import React, { useEffect } from "react";
 import PhoneInput from 'react-phone-number-input';
@@ -96,7 +95,6 @@ export default function BookingFormModal({
                   className={`w-full px-3.5 py-2 rounded-[10px] bg-[rgba(12,23,52,0.78)] border ${phoneError ? 'border-red-500' : 'border-white/10'} text-white text-xs sm:text-sm focus-within:border-[var(--pink)] transition-colors`}
                 />
               </div>
-              {/* എറർ മെസ്സേജ് കാണിക്കാൻ */}
               {phoneError && (
                 <span className="block text-red-500 text-[10px] sm:text-[11px] mt-1 font-medium">
                   {phoneError}
