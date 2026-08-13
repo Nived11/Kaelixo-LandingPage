@@ -128,52 +128,64 @@ export default function Hero() {
             </motion.div>
 
             {/* Stats Metrics Grid */}
-            <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-[10px] md:gap-2 mt-[50px] md:border-t md:border-[var(--line)] md:pt-[14px] max-w-none md:max-w-[600px]">
-              <div className="flex gap-[10px] items-center border-0 md:pr-[10px] md:border-r md:border-[var(--line)]">
-                <span className="text-[20px] text-[var(--pink)]">★</span>
-                <div>
-                  <strong className="block text-[18px] leading-none mb-[2px]">
-                    120+
-                  </strong>
-                  <span className="text-[11px] text-[#b4bdd1]">
-                    Happy Clients
-                  </span>
-                </div>
-              </div>
-              <div className="flex gap-[10px] items-center border-0 md:pr-[10px] md:border-r md:border-[var(--line)]">
-                <span className="text-[20px] text-[var(--pink)]">✔</span>
-                <div>
-                  <strong className="block text-[18px] leading-none mb-[2px]">
-                    250+
-                  </strong>
-                  <span className="text-[11px] text-[#b4bdd1]">
-                    Projects Delivered
-                  </span>
-                </div>
-              </div>
-              <div className="flex gap-[10px] items-center border-0 md:pr-[10px] md:border-r md:border-[var(--line)]">
-                <span className="text-[20px] text-[var(--pink)]">⚑</span>
-                <div>
-                  <strong className="block text-[18px] leading-none mb-[2px]">
-                    10+
-                  </strong>
-                  <span className="text-[11px] text-[#b4bdd1]">
-                    Countries Served
-                  </span>
-                </div>
-              </div>
-              <div className="flex gap-[10px] items-center border-0">
-                <span className="text-[20px] text-[var(--pink)]">♥</span>
-                <div>
-                  <strong className="block text-[18px] leading-none mb-[2px]">
-                    98%
-                  </strong>
-                  <span className="text-[11px] text-[#b4bdd1]">
-                    Client Satisfaction
-                  </span>
-                </div>
-              </div>
-            </motion.div>
+           <motion.div 
+  variants={itemVariants} 
+  className="grid grid-cols-2 md:grid-cols-4 gap-y-[25px] gap-x-[40px] sm:gap-x-[22px] mt-[40px] md:mt-[50px] w-full max-w-[360px] mx-auto md:mx-0 md:max-w-[600px] md:border-t md:border-[var(--line)] md:pt-[14px]"
+>
+  
+  {/* Happy Clients */}
+  <div className="flex gap-[13px] items-center border-0 md:pr-[10px] md:border-r md:border-[var(--line)]">
+    <span className="text-[20px] text-[var(--pink)]">☆</span>
+    <div>
+      <strong className="block text-[18px] leading-none mb-[4px]">
+        120+
+      </strong>
+      <span className="text-[11px] text-[#b4bdd1]">
+        Happy Clients
+      </span>
+    </div>
+  </div>
+  
+  {/* Projects Delivered */}
+  <div className="flex gap-[13px] items-center border-0 md:pr-[10px] md:border-r md:border-[var(--line)]">
+    <span className="text-[20px] text-[var(--pink)]">✓</span>
+    <div>
+      <strong className="block text-[18px] leading-none mb-[4px]">
+        250+
+      </strong>
+      <span className="text-[11px] text-[#b4bdd1]">
+        Projects Delivered
+      </span>
+    </div>
+  </div>
+  
+  {/* Countries Served */}
+  <div className="flex gap-[13px] items-center border-0 md:pr-[10px] md:border-r md:border-[var(--line)]">
+    <span className="text-[20px] text-[var(--pink)]">◎</span>
+    <div>
+      <strong className="block text-[18px] leading-none mb-[4px]">
+        10+
+      </strong>
+      <span className="text-[11px] text-[#b4bdd1]">
+        Countries Served
+      </span>
+    </div>
+  </div>
+  
+  {/* Client Satisfaction */}
+  <div className="flex gap-[13px] items-center border-0">
+    <span className="text-[20px] text-[var(--pink)]">♡</span>
+    <div>
+      <strong className="block text-[18px] leading-none mb-[4px]">
+        98%
+      </strong>
+      <span className="text-[11px] text-[#b4bdd1]">
+        Client Satisfaction
+      </span>
+    </div>
+  </div>
+
+</motion.div>
           </motion.div>
 
           <motion.div
